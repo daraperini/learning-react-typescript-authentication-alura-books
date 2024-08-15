@@ -1,39 +1,53 @@
-![Integrando seu projeto React com APIs](thumbnail.png)
+# Alura Books - Authentication
 
-# AluraBooks
+Hello! This project was developed during Alura's class *React: authenticating users*. Alura Books is a technology books e-commerce. The course's focus was to develop user authentication.
 
-O AluraBooks é uma loja virtual que vende livros da Casa do Código. 
-É um MVP que tá só começando e ainda tem muitas funcionalidades novas para serem desenvolvidas.
+> In progress...
 
-<img src="screencapture.png" alt="Imagem do AluraBooks" width="50%">
+## Used tools:
 
+* 
 
-## 🔨 Funcionalidades do projeto
+*(Alura is a Brazilian technology school and for acessibility reasons this code is in Portuguese)*
 
-O AluraBooks começa com a página inicial já pronta, que você pode baixar e utilizar ou então... criar a sua versão baseada <a href="https://www.figma.com/file/POpX503Kobu83iGdiaICvk/React%3A-Alura-Books?node-id=119%3A3145" target="_blank">no figma</a>.
-No decorrer da formação nós vamos implementar toda a camada de comunicação com a API, inclusive a autenticação.
+## Initializing the project on your computer
 
-## ✔️ Técnicas e tecnologias utilizadas
+- Clone the repository using the command line:
+    - git clone *link of the repository*
+    - cd *file of the repository*
+ 
+- Go to the projects main file:
+    - cd *name of the file*
+ 
+- Run the code:
+    - npm install (to install all project's dependencies)
+    - npm start (to open the project on your browser)
+ 
+* In case the project does not opend automatically type http://localhost:3000 on your browser
 
-Se liga nessa lista de tudo que usaremos nessa formação:
+#
 
-- `React`
-- `React Hooks`
-- `TypeScript`
-- `axios`
-- `Session Storage`
-- `TSDX`
-- `NPM` (no primeiro curso nós criamos uma biblioteca e a publicamos no NPM)
-- `Github Actions`
+# Alura Books - Autenticação
 
-E muito mais!
+Olá! Esse projeto foi desenvolvido durante o curso *React: autenticando usuários*, da Alura. O Alura Books é um e-commerce de livros de tecnologia. O foco do curso foi desenvolver a autenticação de usuários.
 
-## 🛠️ Abrir e rodar o projeto
+> Projeto em desenvolvimento...
 
-Para abrir e rodar o projeto, execute `npm i` para instalar as dependências e `npm start` para inicar o projeto.
+## Ferramentas utilizadas:
 
-Depois, acesse <a href="http://localhost:3000/">http://localhost:3000/</a> no seu navegador.
+* 
 
-## 📚 Mais informações do curso
+## Iniciando o projeto na sua máquina
 
-O AluraBooks é o projeto utilizado durante toda a formação, e você pode navegar entre as branchs para encontrar o momento específico que está buscando.
+- Clone o repositório através do terminal:
+    - git clone *link do repositório*
+    - cd *pasta do repositório*
+ 
+- Entre na pasta do projeto:
+    - cd *nome da pasta*
+ 
+- Rode o código na sua máquina:
+    - npm install (para instalar as dependências do projeto)
+    - npm start (para abrir o projeto no seu navegador)
+ 
+* Caso o projeto não abra automaticamente, digite http://localhost:3000 no seu navegador
