@@ -6,10 +6,22 @@ import usuario from "./assets/usuario.svg";
 import "./BarraNavegacao.css";
 import { useState } from "react";
 import ModalLogin from "../ModalLogin";
+import { useObterToken } from "../../hooks";
 
 const BarraNavegacao = () => {
   const [modalCadastroAberta, setModalCadastroAberta] = useState(false);
   const [modalLoginAberta, setModalLoginAberta] = useState(false);
+
+  const token = useObterToken();
+
+  const [usuarioEstaLogado, setUsuarioEstaLogado] = useState<boolean>(
+    token != null
+  );
+
+  const aoEfetuarLogin = () => {
+    setModalLoginAberta(false);
+    setUsuarioEstaLogado(true);
+  };
 
   return (
     <nav className="ab-navbar">
@@ -41,24 +53,38 @@ const BarraNavegacao = () => {
         </li>
       </ul>
       <ul className="acoes">
-        <li>
-          <BotaoNavegacao
-            texto="Login"
-            textoAltSrc="Icone representando um usuário"
-            imagemSrc={usuario}
-            onClick={() => setModalLoginAberta(true)}
-          />
-          <ModalLogin aberta={modalLoginAberta} aoFechar={() => setModalLoginAberta(false)}/>
-        </li>
-        <li>
-          <BotaoNavegacao
-            texto="Cadastrar-se"
-            textoAltSrc="Icone representando um usuário"
-            imagemSrc={usuario}
-            onClick={() => setModalCadastroAberta(true)}
-          />
-          <ModalCadastroUsuario aberta={modalCadastroAberta} aoFechar={() => setModalCadastroAberta(false)} />
-        </li>
+        {!usuarioEstaLogado && (
+          <>
+            <li>
+              <BotaoNavegacao
+                texto="Login"
+                textoAltSrc="Icone representando um usuário"
+                imagemSrc={usuario}
+                onClick={() => setModalLoginAberta(true)}
+              />
+              <ModalLogin aberta={modalLoginAberta} aoFechar={aoEfetuarLogin} />
+            </li>
+            <li>
+              <BotaoNavegacao
+                texto="Cadastrar-se"
+                textoAltSrc="Icone representando um usuário"
+                imagemSrc={usuario}
+                onClick={() => setModalCadastroAberta(true)}
+              />
+              <ModalCadastroUsuario
+                aberta={modalCadastroAberta}
+                aoFechar={() => setModalCadastroAberta(false)}
+              />
+            </li>
+          </>
+        )}
+        {usuarioEstaLogado && (
+          <>
+            <li>
+              <Link to="/minha-conta/pedidos">Minha conta</Link>
+            </li>
+          </>
+        )}
       </ul>
     </nav>
   );
