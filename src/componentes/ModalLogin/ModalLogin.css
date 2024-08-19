@@ -1,0 +1,15 @@
+.corpoModalLogin{
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+}
+
+.corpoModalLogin form {
+    width: 500px;
+    max-width: 100%;
+}
+
+.corpoModalLogin footer {
+    margin-top: 48px;
+    text-align: center;
+}
