@@ -7,7 +7,3 @@ export const usePersistirToken = () => {
 export const useObterToken = () => {
     return sessionStorage.getItem('token');
 };
-
-export const useLimparToken = () => {
-    sessionStorage.removeItem('token');
-};

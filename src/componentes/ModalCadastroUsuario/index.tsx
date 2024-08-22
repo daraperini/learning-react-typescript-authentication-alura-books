@@ -1,8 +1,8 @@
 import { AbBotao, AbCampoTexto, AbModal } from "ds-alurabooks";
 import imagemPrincipal from "./assets/login.png";
 import { useState } from "react";
-import axios from "axios";
 import "./ModalCadastroUsuario.css";
+import http from "../../http";
 
 interface PropsModalCadastroUsuario {
   aberta: boolean;
@@ -32,8 +32,8 @@ const ModalCadastroUsuario = ({
       complemento,
     };
 
-    axios
-      .post("http://localhost:8000/public/registrar", usuario)
+    http
+      .post("public/registrar", usuario)
       .then(() => {
         alert("Usuário foi cadastrado com sucesso!");
         setNome("");
