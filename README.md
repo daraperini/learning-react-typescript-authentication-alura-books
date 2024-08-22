@@ -1,4 +1,4 @@
-# Alura Books - Authentication
+# Alura Books
 
 Hello! This project was developed during Alura's class *React: authenticating users*. Alura Books is a technology books e-commerce. 
 
@@ -42,7 +42,7 @@ The project was developed using the [mocked Alura Books' API](https://github.com
 
 #
 
-# Alura Books - Autenticação
+# Alura Books
 
 Olá! Esse projeto foi desenvolvido durante a formação *Impulsione sua aplicação React e consuma APIs*, da Alura. O Alura Books é um e-commerce de livros de tecnologia. 
 
